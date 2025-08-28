@@ -1,8 +1,3 @@
-
-a{
-  color: white !important;
-  cursor: pointer;
-}
 /* INIZO MENU */
 .header{
   background-color: transparent;
@@ -138,6 +133,12 @@ display: none;
  text-transform: uppercase;
  color: #000;
  }
+
+a{
+  color: white !important;
+  cursor: pointer;
+}
+
 
  .bg-image {
   background-image: url('../img/HotelPomeliahomepage.jpg'); /* percorso dell'immagine */
@@ -558,5 +559,63 @@ h3 {
   color: black; 
   font-size: smaller
 }
-
 /* SERVIZI ECOSOSTENIBILI */
+
+
+/* Evita scroll orizzontale */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Rendi immagini e svg responsive */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Card Bootstrap: evita sbordo */
+.card {
+  min-width: 0; /* fondamentale per evitare overflow in flexbox */
+  word-wrap: break-word;
+}
+
+/* Container Bootstrap: mai oltre viewport */
+.container, .container-fluid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix hero su mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 15px 60px 15px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .titolo {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .sottotitolo {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .descrizione {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  /* Card in colonna su mobile */
+  .row > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
