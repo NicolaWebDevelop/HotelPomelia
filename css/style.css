@@ -617,5 +617,36 @@ img, svg {
   }
 }
 
+/* fine media query mobile */
+
+
+/* 1. Immagini card sempre contenute */
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2. Evita che la card "sbordi" nel flex */
+.card {
+  min-width: 0; /* già detto ma ribadisco */
+  overflow: hidden; /* taglia eventuali ombre troppo larghe */
+}
+
+/* 3. Gestione colonne bootstrap su mobile */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* 4. Evita padding/margin eccessivi nelle colonne */
+[class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+
+
 
 
